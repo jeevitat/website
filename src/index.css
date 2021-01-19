@@ -1,0 +1,381 @@
+body {
+    background: rgb(253,45,45);
+    background: linear-gradient(180deg, rgba(253,45,45,1) 0%, rgba(255,196,0,1) 16%, rgba(255,251,0,1) 31%, rgba(49,255,0,1) 46%, rgba(0,254,255,1) 60%, rgba(0,6,255,1) 77%, rgba(170,0,255,1) 91%);
+    min-height: 4000px;
+}
+/* width */
+body::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+h1{
+    font-size: 8vh;
+    text-align: center;
+    font-family: BlackberryJam;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+@font-face{
+    font-family: BlackberryJam;
+    src: url(fonts/blackberryjam.ttf);
+}
+@font-face{
+    font-family: QuiteMagical;
+    src: url(fonts/quitemagical.ttf);
+}
+
+@font-face{
+    font-family: HappyEnding;
+    src: url(fonts/myhappyending.ttf);
+}
+#horizontal{
+    display:flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:0%;
+
+}
+button {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: HappyEnding;
+    font-size: calc(16px + 6 * ((150vw - 320px) / 680));
+    border: none;
+    background: none;
+}
+
+button:hover{
+    text-decoration: underline;
+    transform: scale(1.1);
+    transition: .3s ease-in-out;
+}
+
+h2{
+    text-align: center;
+    font-family: QuiteMagical;
+    font-size: 4vh;
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+}
+
+
+
+.tabs {
+    position: relative;
+    max-width: 85%;
+    margin-top: 40px;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    font-family: HappyEnding;
+    line-height: 1.8;
+    font-size: calc(10px + 6 * ((40vw - 320px) / 680));
+    height: 650px;
+    clear: both;
+}
+.tab label {
+    top: 0;
+    cursor: pointer;
+    color: #333;
+    margin-right: 40px;
+    text-transform: uppercase;
+}
+
+    .tab label:hover {
+        border-bottom: 2px solid #1d1d1d;
+        color: #1d1d1d;
+    }
+
+    .tab [type=radio] {
+        display: none;
+    }
+
+.tab__content {
+    position: relative;
+    top: 40px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: opacity .2s cubic-bezier(.42,0,.34,1.01);
+    opacity: 0;
+    height: 600px;
+    overflow-y: auto;
+}
+
+[type=radio]:checked ~ label {
+    border-bottom: 2px solid #1d1d1d;
+    color: #1d1d1d;
+}
+
+    [type=radio]:checked ~ label ~ .tab__content {
+        z-index: 1;
+        opacity: 1;
+    }
+
+#title {
+    font-size: calc(10px + 6 * ((130vw - 300px) / 300));
+    margin-right: 10px;
+    line-height: .2vh;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+#writings{
+    margin-top: 80px;
+    text-align: left;
+    margin-left: 5%;
+}
+
+#resume{
+    text-align: right;
+    margin-right: 5%;
+    margin-top: 70px;
+}
+
+#about{
+    text-align: left;
+    margin-left: 5%;
+    margin-top: 70px;
+}
+
+#resumecontent {
+    text-align: right;
+    margin-right: 5%;
+    margin-top: 20px;
+    width: 80%;
+    float: right;
+    font-family: HappyEnding;
+}
+
+#wrapresume{
+    width: 100%;
+    display: inline-block;
+}
+
+#aboutcontent{
+    text-align: left;
+    margin-left: 5%;
+    margin-top: 20px;
+    font-family: HappyEnding;
+    max-width: 85%;
+    line-height:1.8;
+}
+
+#totop{
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+}
+
+p {
+    font-size: calc(10px + 6 * ((130vh - 300px) / 300));
+}
+
+.carousel {
+    margin-right: 0px;
+    margin-left: 0px;
+    display: block;
+    align-items: center;
+}
+
+.carousel-cell {
+    counter-increment: carousel-cell;
+    padding: 0px;
+    margin-top: 30px;
+    margin-right: 10px;
+    border-radius: 5px;
+
+}
+
+    /* cell number */
+    .carousel-cell:before {
+        display: block;
+        margin-right: 0px;
+        content: counter(carousel-cell);
+    }
+
+#about{
+    padding-top: 30px;
+}
+
+#resume{
+    padding-top: 30px;
+}
+
+#writings{
+    padding-top: 30px;
+}
+
+#writelink{
+    color: black;
+    z-index: 1;
+}
+
+#writelink:hover {
+    border-bottom: 2px solid blue;
+    color: blue;
+}
+
+#videos {
+    clear: both;
+    padding-top: 40px;
+    text-align: right;
+    margin-right: 5%;
+    margin-bottom: 30px;
+}
+
+#viddiv{
+    max-width: 80%;
+    float: right;
+    margin-right: 5%;
+}
+
+iframe{
+    margin: 0px 0px 40px 40px;
+    width: 45vh;
+    float: right;
+}
+
+#videoarea{
+    width: 100vw;
+    display: inline-block;
+}
+
+#contact{
+    text-align: left;
+    margin-top: 15px;
+    padding-top: 30px;
+    margin-left: 5%;
+
+}
+
+#cpage{
+    display:block ;
+    margin-right: 5%;
+}
+
+#contactform {
+    float: left;
+    min-width: 40vw;
+    height: 110vh;
+    padding:0px;
+    display: block;
+    position: relative;
+    margin-left: 3.5%;
+}
+
+#contactp {
+    font-family: HappyEnding;
+    text-align: left;
+}
+
+#cwrap{
+    margin-left: 5%;
+}
+
+
+.sclbtn {
+    width: 10vw;
+    margin-right: 1vw;
+}
+
+.tile {
+    width: 300px;
+    height: 380px;
+    display: inline-block;
+    background-size: cover;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.4s ease-out;
+    box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.44);
+    overflow: hidden;
+    color: black;
+    margin-left: 3vw;
+    margin-bottom: 30px;
+}
+
+    .tile img {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        transition: all 0.4s ease-out;
+    }
+
+    .tile .text {
+        /*   z-index:99; */
+        position: absolute;
+        padding: 30px;
+        height: calc(100% - 60px);
+    }
+
+    .tile p {
+        font-weight: 300;
+        margin: 20px 0 0 0;
+        line-height: 25px;
+        /*   opacity:0; */
+        transform: translateX(-200px);
+        transition-delay: 0.2s;
+    }
+
+.animate-text {
+    opacity: 0;
+    transition: all 0.6s ease-in-out;
+}
+
+.tile:hover {
+    /*   background-color:#99aeff; */
+    box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
+    transform: scale(1.05);
+}
+
+    .tile:hover img {
+        opacity: 0.2;
+    }
+
+    .tile:hover .animate-text {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+
+.tile:hover span {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+
+@media only screen and (min-width: 600px) {
+    #cpage{
+        display: flex;
+    }
+
+    #contactform{
+        height: 90vh;
+    }
+
+    #title {
+        font-size: calc(10px + 6 * ((90vw - 300px) / 300));
+    }
+
+    p {
+        font-size: calc(10px + 6 * ((80vw - 300px) / 325));
+    }
+
+    .tab__content{
+        height: 550px;
+    }
+
+    .sclbtn {
+        width: 5vw;
+        margin-right: 1vw;
+    }
+
+}
